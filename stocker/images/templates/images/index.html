@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html ng-app="imagesApp">
+<head>
+
+  <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.css' %}">
+  <script src="{% static 'angularjs/angular.min.js' %}"></script>
+<title></title>
+</head>
+
+<body ng-controller="ImageListCtrl">
+<h1>Images</h1>
+
+{% verbatim %}
+<ul class="images">
+  <li ng-repeat="image in images | filter:query">
+  {{ image.title }}
+  <p>{{ image.thumb }}</p>
+  </li>
+</ul>
+
+{% endverbatim %}
+
+<script src="{% static 'images/js/images.app.js' %}" type="text/javascript"></script>
+
+
+</body> </html>

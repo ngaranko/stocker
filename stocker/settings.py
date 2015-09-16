@@ -37,6 +37,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
+    'stocker.images',
+
+    # REST framework
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,3 +106,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'bower_components'),
+)
+
+# REST Framewrok
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ],
+}
+
+try:
+    from local_settings import *
+except ImportError:
+    pass

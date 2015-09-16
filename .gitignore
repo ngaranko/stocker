@@ -2,6 +2,12 @@
 __pycache__/
 *.py[cod]
 
+# Stocker excludes
+local_settings.py
+.ropeproject
+collected_static/
+db.sqlite3
+
 # C extensions
 *.so
 

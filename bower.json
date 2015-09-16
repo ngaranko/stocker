@@ -1,0 +1,23 @@
+{
+  "name": "stocker",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ngaranko/stocker",
+  "authors": [
+    "Nick Garanko <ngaranko@gmail.com>"
+  ],
+  "description": "Socker",
+  "main": "manage.py",
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "static",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.5",
+    "bootstrap": "~3.3.5"
+  }
+}
