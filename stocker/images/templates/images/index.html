@@ -15,7 +15,7 @@
 <ul class="images">
   <li ng-repeat="image in images | filter:query">
   {{ image.title }}
-  <p>{{ image.thumb }}</p>
+  <img src="{{ image.thumb }}" />
   </li>
 </ul>
 

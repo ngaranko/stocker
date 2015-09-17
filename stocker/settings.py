@@ -16,6 +16,18 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+# Custom Stocker settings
+
+# Lowercase only. TODO: change analyse_dir command to accept images by mimetype
+IMAGES_EXTENTIONS = (
+    'jpg',
+    'png',
+)
+
+IMAGES_THUMBNAILS_DIR = '.thumbnails'
+IMAGES_THUMBNAILS_SIZE = (128, 128)
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
